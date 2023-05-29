@@ -1,3 +1,5 @@
+/*------------------- NoRep Css -------------------*/
+
 .rowContainer {
     display: flex;
     flex-direction: row;
@@ -8,71 +10,36 @@
     flex-direction: column;
 }
 
+.alignCenter {
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------- Containers -------------------*/
+
+.containerPage {
+    width: 100vw;
+    height: 100vh;
+}
+
 .containerPwdGen {
-    background-color: #161618;
+    width: 25rem;
     border-radius: 2px;
     padding: 1rem;
-    width: 25rem;
+    background-color: #161618;
 }
-
-
-.googleIcon {
-    color: #D9D9D9;
-}
-
-.googleIcon:hover {
-    cursor: pointer;
-}
-
 
 .containerHeader {
     justify-content: space-between;
-    gap: 2vw;
     align-items: center;
-    background-color: #2F2F36;
+    height: 5rem;
     padding: 0rem 2rem;
-}
-
-.sumbmitBtn {
-    border: 2px solid #5E6EFF;
-    background: rgba(94, 110, 255, 0.05);
-    color: #5E6EFF;
-    width: 100%;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-input[type="checkbox"]  {
-    display: grid;
-    place-content: center;
-    appearance: none;
-    width: 1.15em;
-    height: 1.15em;
-    border:2px solid #5E6EFF;
-    border-radius: 0.15em;
-    color: #5E6EFF;
-    cursor: pointer;
-    transform: translateY(2.5px);
-}
-
-input[type="checkbox"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em whitesmoke;
-    transform-origin: center;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}
-  
-input[type="checkbox"]:checked::before {
-    transform: scale(1);
+    gap: 2vw;
+    background-color: #232327;
 }
 
 .content {
-    background-color: #2F2F36;
+    background-color: #232327;
     border-radius: 2px;
     gap: 2vh;
     padding: 1rem;
@@ -91,12 +58,80 @@ input[type="checkbox"]:checked::before {
 }
 
 .containerStength {
+    justify-content: space-between;
+    padding: 0 1rem;
     background-color: #161618;
-    justify-content: space-around;
+}
+
+.containerDisplayStrength {
+    gap: .5vw;
+}
+
+.containerStengthGap {
+    gap: 1vw;
+}
+
+/*------------------- Icons -------------------*/
+
+.googleIcon {
+    user-select: none;
+    color: #D9D9D9;
+}
+
+.googleIcon:hover {
+    cursor: pointer;
+}
+
+/*------------------- Buttons -------------------*/
+
+.sumbmitBtn {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 2px;
+    border: 2px solid #5E6EFF;
+    color: #5E6EFF;
+    background: rgba(94, 110, 255, 0.05);
+}
+
+.sumbmitBtn:hover {
+    transition: .8s;
+    background-color: #5e6eff69;
+}
+
+/*------------------- Inputs -------------------*/
+
+input[type="checkbox"]  {
+    display: grid;
+    place-content: center;
+    width: 1.15em;
+    height: 1.15em;
+    appearance: none;
+    cursor: pointer;
+    border:2px solid #5E6EFF;
+    border-radius: 0.15em;
+    color: #5E6EFF;
+    transform: translateY(2.5px);
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em whitesmoke;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+  
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
 
 input[type="range"] {
     --range-color: #5E6EFF; 
+    background-color: transparent;
 }
   
 input[type="range"]::-moz-range-track {
@@ -104,15 +139,24 @@ input[type="range"]::-moz-range-track {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    background-color: var(--range-color);
     width: 10px; 
     height: 20px; 
+    background-color: var(--range-color);
 }
   
 input[type="range"]::-moz-range-thumb {
-    background-color: black;
     width: 20px;
     height: 20px; 
     border-radius: 999px;
     border: 3px solid var(--range-color);
-  }
+    background-color: #232327;
+}
+
+/*------------------- Others -------------------*/
+
+.strengthBar {
+    height: 2rem;
+    width: .4rem;
+}
+
+/*------------------- NockIA -------------------*/
