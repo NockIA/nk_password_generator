@@ -85,6 +85,7 @@ export const PwdGenerator = () => {
         let color = ""
         let coloredNb = 0
         if (strength == "TOO LOW") {
+            color = "lightcoral"
             coloredNb = 1
         } else if (strength == "EASY") {
             color = "rgb(230, 117, 72)"
@@ -95,7 +96,9 @@ export const PwdGenerator = () => {
         } else if (strength == "HARD") {
             color = "lightgreen"
             coloredNb = 4
-        } 
+        } else {
+            color = "whitesmoke"
+        }
         let result = []
         for (let index = 0; index < coloredNb; index++) {
             result.push(<span key={index} className='strengthBar' style={{backgroundColor:color,border:`2px solid ${color}`}}></span>)
